@@ -1,5 +1,5 @@
 <div class="col-md-6 col-md-offset-3">
-  <%= form_for @review do |f| %>
+  <%= form_for [@restaurant, @review] do |f| %>
       <div class="form-group">
         <%= f.label :rating %>
         <%= f.text_area :rating, class: "form-control" %>
