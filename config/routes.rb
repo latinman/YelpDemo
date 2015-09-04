@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get "/about" => "pages#about"
   get "/contact" => "pages#contact"
   resources :restaurants
-  resources :reviews
+  resources :reviews, except: [:index, :show]
   root "restaurants#index"
 end
