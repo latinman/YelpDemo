@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       flash[:success] = "Successfully created review!"
-      redirect_to root_path
+      redirect_to @restaurant
     else
       flash[:danger] = "Could not create this review..."
       render "new"
