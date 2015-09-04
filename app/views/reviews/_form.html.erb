@@ -1,9 +1,7 @@
 <div class="col-md-6 col-md-offset-3">
   <%= form_for [@restaurant, @review] do |f| %>
-      <div class="form-group">
-        <%= f.label :rating %>
-        <%= f.text_area :rating, class: "form-control" %>
-      </div>
+
+      <div id="star-rating"></div>
 
       <div class="form-group">
         <%= f.label :comment %>
@@ -15,3 +13,10 @@
       </div>
   <% end %>
 </div>
+
+<script>
+    $("#star-rating").raty({
+        path: "/assets",
+        scoreName: "review[rating]"
+    });
+</script>
